@@ -61,14 +61,14 @@
     <div class="line"></div>
     <div class="container">
         <p>
-            ?????
+            The tables present the performance of all the methods. We conduct the training and testing of SDA-GRIN five times, reporting the mean and standard deviations. SDA-GRIN shows substantial improvements for both the AQI and AQI-36 datasets. Specifically, for AQI-36, our approach achieves a 0.25% improvement in MAE and a 9.40% improvement in MSE. For AQI, SDA-GRIN enhances MAE by 2.04%, MSE by 9.51%, and MRE by 1.05%. Regarding the METR-LA dataset, our method outperforms the best model with improvements of 1.49%, 1.94%, and 0.93% in MAE, MSE, and MRE, respectively. These improvements are primarily attributed to the awareness of SD changes gained through MHA. Moreover, SDA-GRIN’s effectiveness across various datasets from different domains underscores its generalizability.
         </p>
         
-        <div class="container">
-            <img src="asset/table1.png" width=800>
+        <div class="container" style="text-align: center;">
+            <img src="asset/table1.png" width=600>
         </div>
-        <div class="container">
-            <img src="asset/table2.png" width=800>
+        <div class="container" style="text-align: center;">
+            <img src="asset/table2.png" width=600>
         </div>
     </div>
 
@@ -76,12 +76,12 @@
     <div class="line"></div>
     <div class="container">
         <p>
-            ?????
+            The window size plays a crucial role in the model's performance. Four different window sizes were tested: 32, 64, 128, and 254. In the case of the PEMS-BAY, METR-LA, and AQI datasets, the largest window size (254) yielded the best results, as it allows the Multi-Head Attention (MHA) mechanism to capture a wider context, thereby improving its ability to understand the data patterns. However, for the AQI-36 dataset, the smallest window size (32) outperformed the others, likely because the dataset contains fewer variables (36) compared to over 200 in the other datasets.
         </p>
 
         
-        <div class="container">
-            <img src="asset/windowsize.png" width=800>
+        <div class="container" style="text-align: center;">
+            <img src="asset/windowsize.png" width=500>
         </div>
     </div>
 
@@ -89,12 +89,12 @@
     <div class="line"></div>
     <div class="container">
         <p>
-            ?????
+            We experimented with SDA-GRIN using missing rate values ranging from 10% to 90% on the PEMS-BAY and METR-LA datasets. As shown in bellow Figure, SDA-GRIN's performance decreases as the missing rate increases. This decline is due to the fact that at higher missing rates, a large portion of the variables' samples are filled with zeros (indicating missing values), which makes it challenging for the MHA mechanism to detect changes and adjust the graph structure effectively.
         </p>
 
         
-        <div class="container">
-            <img src="asset/missingrate.png" width=800>
+        <div class="container" style="text-align: center;">
+            <img src="asset/missingrate.png" width=600>
         </div>
     </div>
 
