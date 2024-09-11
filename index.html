@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">    
+    <script id="MathJax-script" async 
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <title>SDA-GRIN for Adaptive Spatial-Temporal Multivariate Time Series Imputation</title>
+    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/citation.css">
+    <link rel="stylesheet" href="css/title.css">
+</head>
+
+<body>
+    <div class="header" id="home" style="padding-bottom: 90px;"></div>
+
+    <section class="title">
+      SDA-GRIN for Adaptive Spatial-Temporal Multivariate Time Series Imputation
+    </section>
+
+    <section class="author">
+        <affiliation>(Submitted to ICASSP 2025)</affiliation>
+        <p style="margin: 10px 0;">
+            <a href="https://ameskandari.github.io">Amir Eskandari</a>,
+            <a href="http://amananand.ca/">Aman Anand</a>,
+            <a href="https://co-author-website.com/">Drishti Sharma</a>,
+            <a href="https://research.cs.queensu.ca/home/farhana/">Farhana Zulkernine</a>
+        </p>
+        <p style="margin: 10px 0;">
+            <a href="https://www.queensu.ca/">Queen's University</a>
+        </p>
+        <affiliation style="display: block; margin: 10px 0;">School of Computing, Queen’s University, Kingston, K7L 2N8, Canada</affiliation>
+        <p style="margin: 10px 0;">
+            <a href="https://arxiv.org/pdf/your-paper.pdf" class="links">[paper]</a>
+            <a href="https://github.com/your-repo/Auto-Distill" class="links">[code]</a>
+        </p>
+    </section>
+
+    <div class="header" id="abstract">Abstract</div>
+    <div class="line"></div>
+
+    <div class="container">
+        <p>
+            In various applications, the multivariate time series often suffers from missing data. This issue can significantly disrupt systems that rely on the data. Spatial and temporal dependencies can be leveraged to impute the missing samples. Existing imputation methods often ignore dynamic changes in spatial dependencies. We propose a Spatial Dynamic Aware Graph Recurrent Imputation Network (SDA-GRIN) which is capable of capturing dynamic changes in spatial dependencies. SDA-GRIN leverages a multi-head attention mechanism to adapt graph structures with time. SDA-GRIN models multivariate time series as a sequence of temporal graphs and uses a recurrent message-passing architecture for imputation. We evaluate SDA-GRIN on four real-world datasets from two domains: SDA-GRIN improves MSE by 9.51% for the AQI and 9.40% for AQI-36. On the PEMS-BAY dataset, it achieves a 1.94% improvement in MSE. Detailed ablation study demonstrates the effect of window sizes and missing data on the performance of the method.
+        </p>
+    </div>
+
+    <h1 class="header" id="results">Overview</h1>
+        <div class="line"></div>
+        <div class="container">
+            <embed src="asset/sda-grin-diagram.pdf" type="application/pdf" width="100%" height="600px">
+        <p>
+            <b>Overview of SDA-GRIN</b>. The multivariate time series (MTS) is chunked into windows. <b>(a)</b> MHA calculates attention among variables within each window, generating attention weights. These are pooled and used to adapt the static graph with time, creating \(A^*_t\). <b>(b)</b> Later, in the unidirectional setting, the model processes the adapted graph (\(A^{*}_t\)), masked input (\(X_t\)), and previous context (\(H_{t-1}\)), outputting first-stage, second-stage imputed samples (\(\hat{X}_t^{(1)}, \hat{X}_t^{(2)}\)), and updated context (\(H_t\)).
+        </p>
+        </div>
+
+
+    <h1 class="header" id="results">Main Comparision</h1>
+    <div class="line"></div>
+    <div class="container">
+        <p>
+            ?????
+        </p>
+        
+        <div class="container">
+            <img src="asset/table1.png" width=800>
+        </div>
+        <div class="container">
+            <img src="asset/table2.png" width=800>
+        </div>
+    </div>
+
+    <h1 class="header" id="results">Ablation Study on Window Size</h1>
+    <div class="line"></div>
+    <div class="container">
+        <p>
+            ?????
+        </p>
+
+        
+        <div class="container">
+            <img src="asset/windowsize.png" width=800>
+        </div>
+    </div>
+
+    <h1 class="header" id="results">Ablation Study on Missing Rate</h1>
+    <div class="line"></div>
+    <div class="container">
+        <p>
+            ?????
+        </p>
+
+        
+        <div class="container">
+            <img src="asset/missingrate.png" width=800>
+        </div>
+    </div>
+
+    <div class="header" id="bibtex">BibTex</div>
+    <div class="line"></div>
+
+    <section class="citation">
+        available soon
+    </section>
+
+</body>
+
+</html>
