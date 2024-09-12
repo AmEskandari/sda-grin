@@ -34,7 +34,7 @@
         <affiliation style="display: block; margin: 10px 0;">School of Computing, Queen’s University, Kingston, K7L 2N8, Canada</affiliation>
         <p style="margin: 10px 0;">
             <a href="https://arxiv.org/pdf/your-paper.pdf" class="links">[paper]</a>
-            <a href="https://github.com/your-repo/Auto-Distill" class="links">[code]</a>
+            <a href="https://github.com/AmEskandari/sdagrin" class="links">[code: comming soon]</a>
         </p>
     </section>
 
@@ -52,7 +52,7 @@
         <div class="container">
             <embed src="asset/sda-grin-diagram.pdf" type="application/pdf" width="100%" height="600px">
         <p>
-            <b>Overview of SDA-GRIN</b>. The multivariate time series (MTS) is chunked into windows. <b>(a)</b> MHA calculates attention among variables within each window, generating attention weights. These are pooled and used to adapt the static graph with time, creating \(A^*_t\). <b>(b)</b> Later, in the unidirectional setting, the model processes the adapted graph (\(A^{*}_t\)), masked input (\(X_t\)), and previous context (\(H_{t-1}\)), outputting first-stage, second-stage imputed samples (\(\hat{X}_t^{(1)}, \hat{X}_t^{(2)}\)), and updated context (\(H_t\)).
+            <b>Overview of SDA-GRIN</b>. The multivariate time series is chunked into windows. <b>(a)</b> MHA calculates attention among variables within each window, generating attention weights. These are pooled and used to adapt the static graph with time, creating \(A^*_t\). <b>(b)</b> Later, in the unidirectional setting, the model processes the adapted graph (\(A^{*}_t\)), masked input (\(X_t\)), and previous context (\(H_{t-1}\)), outputting first-stage, second-stage imputed samples (\(\hat{X}_t^{(1)}, \hat{X}_t^{(2)}\)), and updated context (\(H_t\)).
         </p>
         </div>
 
