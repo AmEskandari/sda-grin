@@ -1,12 +1,15 @@
-element {
-}
-
 * {
   margin: 0px;
   padding: 0px;
-  font-size: 18px;
-  font-family: Helvetica, Arial, sans-serif;
-  background-color: #fffff;
+  font-size: 16px; /* Reduced base font size */
+  font-family: 'Georgia', serif; /* Classic, classy font */
+  background-color: #ffffff; /* White background */
+  color: #383838; /* Dark Gray for body text */
+  line-height: 1.5; /* Adjusted line height */
+}
+
+body {
+  padding-top: 15px; /* Reduced padding */
 }
 
 .video-resize {
@@ -18,59 +21,180 @@ element {
 }
 
 .links {
-    margin-right: 40px; /* Add space between the paper and code links */
+    margin-right: 15px; /* Reduced margin */
+    color: #005A9C; /* Refined, darker blue for links */
+    text-decoration: none;
+}
+
+.links:hover {
+    text-decoration: underline; /* Add underline on hover */
 }
 
 
 .title {
   overflow: hidden;
   text-align: center;
-  margin: 20px auto;
-  padding: 0px 10px;
-  max-width: 1024px;
-  font-weight: 550;
-  font-size: 30px;
-  color: #333;
+  margin: 30px auto; /* Reduced margin */
+  padding: 15px; /* Reset padding, was for border */
+  max-width: 980px; /* Slightly reduced max-width */
+  font-weight: bold;
+  font-size: 32px; /* Reduced font size */
+  color: #181818; /* Very Dark Gray/Almost Black for title */
+  border-bottom: 2px solid #E0E0E0; /* Restored original bottom border */
+  padding-bottom: 8px; /* Restored original padding-bottom */
 }
-
-/*.title {
-  font-size: 32px;
-  text-align: center;
-  margin: 20px 0;
-}*/
 
 .author {
   text-align: center;
-  margin: 10px 0;
+  margin: 20px auto; /* Adjusted margin */
+  padding: 15px; /* Reset padding, was for border */
+  max-width: 980px; /* Consistent max-width */
 }
 
+/* .links were already defined above, this specific one might be redundant or can be merged */
+/*
 .links {
   margin: 0 10px;
 }
+*/
 
 .container {
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 750px; /* Reduced max-width */
+  margin: 20px auto; /* Reduced margin */
   text-align: justify;
+  padding: 15px; /* Reduced padding */
+  background-color: #ffffff; /* Ensure container is white */
+  border-radius: 6px; /* Slightly increased border-radius for consistency */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Adjusted shadow */
+  border: 2px dashed #DADCE0; /* Changed border color to a softer gray */
+}
+
+.container img {
+  border-radius: 3px; /* Reduced border-radius */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  margin-top: 8px; /* Reduced margin */
+  margin-bottom: 8px; /* Reduced margin */
+  max-width: 90%; /* Make images smaller within container */
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Specific styling for the PDF embed */
+.container embed {
+  max-width: 100%;
+  height: 450px; /* Reduced height for the PDF */
+  display: block;
+  margin: 15px auto;
 }
 
 .header {
-  font-size: 24px;
+  font-size: 28px; /* Reduced font size */
+  font-weight: bold;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 45px; /* Reduced margin */
+  margin-bottom: 10px; /* Reduced margin */
+  color: #282828; /* Dark Gray for section headers */
 }
 
 .line {
-  height: 2px;
-  background-color: #333;
-  max-width: 800px;
-  margin: 20px auto;
-  width: 80%;
+  height: 1px;
+  background-color: #E0E0E0; /* Light Gray for lines */
+  max-width: 650px; /* Reduced max-width */
+  margin: 10px auto 20px auto; /* Reduced margin */
+  width: 65%; /* Adjusted width */
   display: block;
 }
 
 .citation {
   text-align: left;
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 750px; /* Consistent with container */
+  margin: 30px auto; /* Reduced margin */
+  background-color: #FDFDFD; /* Extremely light gray, almost white */
+  padding: 20px; /* Reduced padding */
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04); /* Subtle shadow */
+  border: 2px dashed #DADCE0; /* Changed border color to a softer gray */
+}
+
+.citation pre {
+  background-color: #F7F7F7; /* Slightly more distinct light gray for code background */
+  padding: 12px; /* Reduced padding */
+  border-radius: 3px;
+  border: 1px dashed #DCDCDC; /* Light dashed border */
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  font-size: 0.9em; /* Slightly smaller BibTeX font */
+}
+
+.citation code {
+  font-family: 'Courier New', Courier, monospace;
+  color: #333333; /* Dark gray for BibTeX text */
+  background-color: transparent;
+}
+
+/* Affiliation text styling */
+.author affiliation {
+  font-style: italic;
+  color: #666666; /* Medium Gray for affiliation */
+  font-size: 0.95em;
+}
+
+/* Styles for side-by-side tables */
+.table-container {
+  display: flex;
+  justify-content: space-around; /* Distribute space around items */
+  align-items: flex-start; /* Align items to the top */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens if necessary */
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.table-item {
+  flex-basis: 48%; /* Each table takes up slightly less than half, allowing for a gap */
+  text-align: center; /* Center the image within the item */
+  margin-bottom: 10px; /* Add some margin if they wrap */
+}
+
+.table-item img {
+  max-width: 100%; /* Image is responsive within its flex item */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+/* MathJax alignment fix for sub/sup rendering - Attempt 3 */
+mjx-container {
+  display: inline-block !important; /* Ensure proper block formatting for alignment */
+  font-size: 100% !important;    /* Base font size for MathJax scaling */
+  line-height: 1 !important;     /* CRITICAL: Reset line-height for the main container */
+  vertical-align: baseline !important; /* Align the container with the surrounding text baseline */
+  background: none !important;   /* Remove any inherited background */
+  border: none !important;       /* Remove any inherited border */
+  margin: 0 !important;          /* Remove any inherited margin */
+  padding: 0 !important;         /* Remove any inherited padding */
+  text-align: left !important;   /* MathJax usually controls its internal alignment */
+  color: inherit !important;     /* Inherit text color */
+  font-family: inherit !important; /* Allow MathJax to use its preferred fonts or inherit */
+}
+
+mjx-container * {
+  line-height: 1 !important;     /* CRITICAL: Override inherited line-height for all internal elements. */
+  vertical-align: initial !important; /* Reset vertical-align. Allows MathJax to control sub/sup alignment. */
+  background: none !important;
+  border: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  font-family: inherit !important; /* Let MathJax fonts take precedence */
+  font-size: inherit !important;   /* Let MathJax scale fonts internally */
+  font-weight: inherit !important; /* Avoid overriding MathJax's font weights */
+  font-style: inherit !important;  /* Avoid overriding MathJax's font styles */
+  color: inherit !important;       /* Allow MathJax to control internal colors */
+  text-align: initial !important;  /* Reset text-align */
+  letter-spacing: initial !important; /* Reset letter-spacing */
+  text-transform: initial !important; /* Reset text-transform */
+  word-spacing: initial !important;   /* Reset word-spacing */
+  text-shadow: none !important;       /* Reset text-shadow */
+  box-sizing: content-box !important; /* MathJax might rely on content-box */
 }
